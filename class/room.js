@@ -1,8 +1,9 @@
-class Room {
+const { Item } = require('./item');
+
+class Room extends Item {
 
     constructor(name, description) {
-        this.name = name;
-        this.description = description;
+        super(name, description);
         this.exits = {};
         this.items = [];
     }
@@ -44,8 +45,12 @@ class Room {
     }
 
     getItemByName(name) {
+			for (let item of this.items) {
+				if (item.name == name) {
+					return item;
+				}
+			}
 
-        // Fill this in
     }
 
 }

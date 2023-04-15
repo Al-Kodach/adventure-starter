@@ -76,7 +76,7 @@ function processCommand() {
 
         } else if (cmd.startsWith("take ")) {
             let itemName = cmd.split(" ")[1];
-
+            console.log(cmd)
             player.takeItem(itemName);
 
         } else if (cmd.startsWith("drop ")) {
